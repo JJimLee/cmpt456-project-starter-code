@@ -53,6 +53,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.xml.sax.SAXException;
 
+// the file sample was copy from Search File
 
 /** Simple command-line based search demo. */
 public class TFIDFSearchFiles {
@@ -106,6 +107,8 @@ public class TFIDFSearchFiles {
     
     IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(index)));
     IndexSearcher searcher = new IndexSearcher(reader);
+    // https://lucene.apache.org/core/8_0_0/core/org/apache/lucene/search/similarities/Similarity.html
+    // https://www.programcreek.com/java-api-examples/index.php?api=org.apache.lucene.search.similarities.Similarity
     CMPT456Similarity similarity = null;
     similarity = new CMPT456Similarity();
     searcher.setSimilarity(similarity);

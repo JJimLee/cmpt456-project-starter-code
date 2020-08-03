@@ -16,9 +16,12 @@ This project is some modification towards Lucene library in Java. Due to the con
 	1. docker build -t cmpt456-lucene-solr:6.6.7 .
 		or		docker run -t -d --name "testing_file" [tag id]
 	2. docker run -it cmpt456-lucene-solr:6.6.7
+	 	or		docker exec -it testing_file /bin/bash
+	 	use to check ls /lucene-solr/lucene/demo/src/java/org/apache/lucene/demo/
 	3. ant -f lucene/demo/build.xml
 	4. ant -f lucene/demo/build.xml -Ddocs=lucene/demo/data/wiki-small/en/articles/ run-indexing-demo
 	5. ant -f lucene/demo/build.xml run-search-index-demo
+
 
 ## Copy insturction
 	

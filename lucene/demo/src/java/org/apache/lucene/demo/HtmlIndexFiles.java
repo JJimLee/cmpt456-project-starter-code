@@ -202,6 +202,8 @@ public class HtmlIndexFiles {
       //TODO
       Reader reader= null;
       reader = new InputStreamReader(stream);
+      // ready the reader(as input) and pass through to the DemoHTMLParser
+      // https://lucene.apache.org/core/7_5_0/benchmark/org/apache/lucene/benchmark/byTask/feeds/DemoHTMLParser.html
       try{
           org.apache.lucene.benchmark.byTask.feeds.DemoHTMLParser.Parser parser = null;
           parser = new org.apache.lucene.benchmark.byTask.feeds.DemoHTMLParser.Parser(reader);
